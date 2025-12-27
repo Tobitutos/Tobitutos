@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tobitutos - Home Page</title>
+ <style>
+        body {
+            margin: 0;
+            background-color: #2b2b2b; /* gris oscuro */
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        /* Barra superior */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            background-color: #1f1f1f;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            box-sizing: border-box;
+            z-index: 1000;
+        }
+
+        /* Imagen izquierda */
+        .navbar img {
+            height: 40px;
+        }
+
+        /* Contenedor de botones */
+        .nav-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        /* Botones */
+        .nav-buttons a {
+            background-color: #3a3a3a;
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            transition: background-color 0.2s;
+        }
+
+        .nav-buttons a:hover {
+            background-color: #555;
+        }
+
+        /* Reusable button class for anchors outside navbar */
+        .button {
+            background-color: #3a3a3a;
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            transition: background-color 0.2s;
+            display: inline-block;
+        }
+
+        .button:hover {
+            background-color: #555;
+        }
+
+        /* Contenido para que no quede tapado */
+        .content {
+            padding-top: 80px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <!-- Imagen izquierda -->
+        <img src="logo.png" alt="Logo">
+
+        <!-- Botones -->
+        <div class="nav-buttons">
+            <a onclick="HomePage()" href="#">Home Page</a>
+            <a onclick="Projectos()" href="#">Projectos</a>
+        </div>
+    </div>
+
+    <div class="content">
+        <h1>¡Bienvenido a Tobitutos!</h1>
+        <p>¡Bienvenido a Tobitutos! Soy Tobias, supongo que has entrado a esta pagina web para ver mis projectos, aqui abajo te dejo el boton para ⬇verlos⬇</p>
+        <a class="button" onclick="Projectos()" href="#">Projectos</a>
+    </div>
+</body>
+<script>
+function HomePage() {
+    window.location.href = "Index.html";
+}
+function Projectos() {
+    window.location.href = "Projectos.html";
+}
+</script>
+</html>
