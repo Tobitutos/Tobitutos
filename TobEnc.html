@@ -92,6 +92,7 @@
         <h1>TobEncriptator</h1>
         <img src="TobEncLogo.png" alt="TobEncLogo">
         <p>TobEnc es un programa para encriptar y desencriptar archivos programado en el lenguaje de Python. Es educacional, no encripta archivos sin permiso. V1.0</p>
+        <p>Descargas: <span id="contador">...</span></p>
         <a class="button" onclick="TobEnc()" href="#">Descargar</a>
     </div>
 </body>
@@ -108,5 +109,11 @@ function TobEnc() {
     link.download = "TobEncriptator Setup.exe";
     link.click();
 };
+<script>
+fetch("https://api.counterapi.dev/v1/tobenc/descargas")
+  .then(r => r.json())
+  .then(d => {
+    document.getElementById("contador").innerText = d.count;
+  });
 </script>
 </html>
